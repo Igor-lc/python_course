@@ -1,4 +1,4 @@
-from  sys import argv
+from sys import argv
 
 f, n = int(argv[1]), int(argv[2])
 f_, n_ = 1, 1

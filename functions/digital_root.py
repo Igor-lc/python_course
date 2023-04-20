@@ -9,7 +9,7 @@ def root(number):
 
 print(root(95554651))
 
-
+# ver2
 def root2(number):
     result = 0
     while number > 0:
@@ -21,7 +21,15 @@ def root2(number):
 
 print(root2(95554651))
 
+# ver3
+def root3(number):
+    number = sum(map(int, list(str(number))))
+    return (root3(number), number)[number < 10]
 
+print(root3("95554651"))
+
+
+# bad version:
 def root4(number):
     dr = 0
     for i in str(number):
@@ -39,6 +47,4 @@ def root4(number):
         return dr
 
 print(root4(95554651))
-
-
 

@@ -1,13 +1,11 @@
-import random
-n = int(argv[1])
+import sys
 
-# method Monte-Carlo
-inside_the_circle = 0
-for i in range(n):
-    x = random.uniform(-1, 1)  # get a random floating point number in the range -1...1
-    y = random.uniform(-1, 1)
-    if x ** 2 + y ** 2 <= 1:
-        inside_the_circle += 1
+sys.setrecursionlimit(1000)
 
-pi = 4 * inside_the_circle / n
-print(pi)
+
+import sys
+
+# Отримати поточне значення максимальної глибини рекурсії
+current_limit = sys.getrecursionlimit()
+
+print("Поточна максимальна глибина рекурсії:", current_limit)

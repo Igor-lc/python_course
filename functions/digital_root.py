@@ -1,12 +1,17 @@
+import sys
+sys.setrecursionlimit(1000)
+current_limit = sys.getrecursionlimit()
+print("Поточн максимальна глибина рекурсії:", current_limit)
+
+# I use recursion
+
 def root(number):
-    # I use recursion
     result = 0
     for i in str(number):
         result += int(i)
     if result < 10:
         return result
     return root(result)
-
 print(root(95554651))
 
 # ver2
@@ -18,19 +23,32 @@ def root2(number):
     if result < 10:
         return result
     return root2(result)
-
 print(root2(95554651))
+
 
 # ver3
 def root3(number):
     number = sum(map(int, list(str(number))))
-    return (root3(number), number)[number < 10]
-
+    return (lambda x: root3(number), lambda x: number)[number < 10](number)
 print(root3("95554651"))
 
 
-# bad version:
+# ver 4
 def root4(number):
+    number = sum(map(int, list(str(number))))
+    return (lambda x: x if x < 10 else root(x))(number)
+print(root4("95554651"))
+
+
+def root5(number):
+    number = sum(map(int, list(str(number))))
+    return (root5(number), lambda x: number)[number < 10]
+print(root5("95554651"))
+
+
+
+# bad version:
+def root6(number):
     dr = 0
     for i in str(number):
         dr += int(i)
@@ -46,5 +64,5 @@ def root4(number):
     else:
         return dr
 
-print(root4(95554651))
+print(root6(95554651))
 

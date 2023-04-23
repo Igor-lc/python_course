@@ -60,3 +60,12 @@ def dates2(date):
 
 result = dates2('12.03.2016')
 print(result)
+
+
+'''313. YESTERDAY AND TOMORROW
+Write a dates function that takes a date string argument (the current day) and returns a tuple of two elements: the previous day and the next day, relative to the passed one.
+
+The date argument is passed as a DD.MM.YYYY format string. The returned tuple also contains the dates as strings in the format DD.MM.YYYY. The function must take into account leap years.
+
+result = dates('12.03.2016')
+print(result)  # ('11.03.2016', '13.03.2016')'''

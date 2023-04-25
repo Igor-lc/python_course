@@ -1,7 +1,6 @@
 from collections import defaultdict
 transactions_file = open("bank2.txt", "r")
 
-# Словарь, который будет хранить счета.
 # Используем defaultdict, чтобы автоматически создавать ключи.
 accounts = defaultdict(int)
 

@@ -104,3 +104,28 @@ with open("data.txt", encoding='utf8') as f:
                     res += m[ids - 7]
             ids += 1
 print(res)
+
+
+'''317. SUM OF ELEMENTS AROUND
+Difficulty: 7 out of 10
+
+Next to the program is the data.txt file with the following content:
+
+1 2 3 4 5 9
+6 7 8 9 0 8
+1 7 4 3 1 7
+2 5 13 1 2 1
+3 2 4 0 4 2
+5 9 7 0 16 0
+8 0 19 3 4 3
+7 4 6 1 0 21
+
+This is a regular NxM matrix with numbers.
+
+Write a program that receives the row number and column number in the matrix from the command line arguments, then finds the element at the intersection of the passed coordinates, and then calculates the sum of the values of the elements around the found element. Numbers of elements in rows and columns should be counted from zero.
+
+Calculation example. The program receives the values 1 (row) and 5 (column). According to the given coordinates, the number 8 is found. There are elements around it: 9, 5, 0, 1, 7. Their sum is 22 - this is the answer.
+
+Usage example:
+> python program.py 1 5
+22'''

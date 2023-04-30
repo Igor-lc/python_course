@@ -36,3 +36,39 @@ while i < len(times):
     i += 1
 
 print("{:02}:{:02}".format(best_km_time // 60, best_km_time % 60))
+
+
+'''318. BEST KILOMETER
+Difficulty: 6 out of 10
+The file run.txt, which is located next to the program, contains information about the running workout. Each line of this file is responsible for the time (in seconds) that the athlete spent to overcome the distance of 200 meters.
+
+Consider an example of such a file:
+
+70
+70
+67
+68
+68
+65
+65
+60
+61
+62
+60
+63
+65
+66
+67
+70
+67
+68
+71
+It has 19 entries, which means the athlete ran 19 x 200m = 3800 meters. Since there were ups and downs during the run as well as other factors, the speed on different segments was different.
+
+Write a program that analyses the data and outputs the best time a runner has completed per kilometer. Note that the best kilometer can be anywhere along the course. In this case, the best kilometer is a sequence of 60, 61, 62, 60, 63 or 306 seconds (5 minutes, 6 seconds). This kilometer was between 1800 and 2800 meters.
+
+Data should be output in MM:SS format.
+
+Usage example (for a file from a task):
+> python program.py
+> 05:06'''

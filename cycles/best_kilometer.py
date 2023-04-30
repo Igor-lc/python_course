@@ -1,15 +1,17 @@
 # ver 1
-f = list(map(int, open('run.txt', encoding='utf8')))
-start, end, best_km = 0, 5, float('inf')
+with open('run.txt', encoding='utf8') as f:
+    f = list(map(int, f))
+
+start, end, best_time = 0, 5, float('inf')
 
 while end <= len(f):
     time = sum(f[start:end])
-    if best_km > time:
-        best_km = time
+    if best_time > time:
+        best_time = time
     start += 1
     end += 1
 
-print(f"{best_km // 60:02}:{best_km % 60:02}")
+print(f"{best_time // 60:02}:{best_time % 60:02}")
 
 # ver 2
 run_file = open("run.txt")

@@ -1,39 +1,49 @@
 class Point:
-    def __init__(self):
-        self._x = None
-        self._y = None
+    def __init__(self, x, y):
+        self._x = float(x)
+        self._y = float(y)
+    def set_x(self, x):
+        self._x = float(x)
+    def get_x(self):
+        return self._x
+    def set_y(self, y):
+        self.y = float(y)
+    def get_y(self):
+        return self._y
+    x = property(get_x, set_x)
+    y = property(get_y, set_y)
 
-    def set(self, x, y):
+'''class Point:
+    def __init__(self, x, y):
         self._x = float(x)
         self._y = float(y)
 
     def get_x(self):
         return self._x
 
+    def set_x(self, value):
+        self._x = float(value)
+
     def get_y(self):
         return self._y
 
+    def set_y(self, value):
+        self._y = float(value)
 
-    x = property(get_x, set)
-    y = property(get_y, set)
+    def set(self, x, y):
+        self.x = x
+        self.y = y
 
-
-point = Point("12.34", 15.67)
-print(type(point.x))  # <class 'float'>
-print(type(point.y))  # <class 'float'>
-print()
+    x = property(get_x, set_x)
+    y = property(get_y, set_y)'''
 
 point = Point(12.34, "15.46")
-print(type(point.x))  # <class 'float'>
-print(type(point.y))  # <class 'float'>
-print()
-
+print(type(point.x))
+print(type(point.y))
 point.x = "4"
 point.y = 5.4
-print(point.x)  # 4.0
-print(point.y)  # 5.4
-print()
-
+print(point.x)
+print(point.y)
 point.set(7, "99.8")
-print(point.x)  # 7.0
-print(point.y)  # 99.8
+print(point.x)
+print(type(point.y))

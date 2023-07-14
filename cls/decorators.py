@@ -27,3 +27,8 @@ def decorator(func):
     return wrapper_decorator
 
 
+@decorator
+def my_function():
+    print("Hello, decorator!")
+
+my_function()

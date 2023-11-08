@@ -1,13 +1,10 @@
-# Імпортуємо бібліотеку
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
-# Відкриваємо відеофайл
 clip = VideoFileClip("1.mp4")
 
 # Обрізаємо відео від 3 до 7 секунди
 clip = clip.subclip(0, 1657)
 
-# Зберігаємо відео в новому файлі
 clip.write_videofile("11.mp4")
 
 
@@ -16,7 +13,6 @@ clip.write_videofile("11.mp4")
 from moviepy.video.io.VideoFileClip import VideoFileClip
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 
-# Open the video file
 video_file = "1.mp4"
 clip = VideoFileClip(video_file)
 
@@ -27,7 +23,6 @@ end_time = 49   # End time in seconds
 # Cut the video from start_time to end_time
 subclip = clip.subclip(start_time, end_time)
 
-# Save the cut video to a new file
 subclip.write_videofile("11.mp4")
 """
 
@@ -39,7 +34,6 @@ from moviepy.video.io.VideoFileClip import VideoFileClip
 from moviepy.video.io.ffmpeg_tools import ffmpeg_extract_subclip
 from moviepy.editor import concatenate_videoclips
 
-# Open the video file
 video_file = "6.mp4"
 clip = VideoFileClip(video_file)
 
@@ -56,6 +50,5 @@ part2 = clip.subclip(start_time_2, end_time_2)
 # Concatenate the two parts to create the final video
 final_clip = concatenate_videoclips([part1, part2])
 
-# Save the final video to a new file
 final_clip.write_videofile("7.mp4")
 '''
